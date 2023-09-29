@@ -40,11 +40,11 @@ body {
 .right {
   background-color: var(--background-color-right);
   flex-grow: 6;
-  flex-basis:60vw;
+  flex-basis:63vw;
 }
 
 .left {
   flex-grow: 4;
-  flex-basis: 40vw;
+  flex-basis: 37vw;
   flex-shrink:0;
 }
