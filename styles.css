@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  flex:auto;
+  text-align: center;
+  color: coral;
+  background: antiquewhite;
+}
