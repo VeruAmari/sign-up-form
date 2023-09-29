@@ -4,10 +4,10 @@
 }
 
 :root {
-  background: greenyellow;
+  background: var(--background-color-left);
   
   
-  --background-color-left: greenyellow;
+  --background-color-left: rgb(192, 240, 120);
   --background-color-right: white;
   --dark-transparent: rgba(50,50,50,60%);
 }
@@ -31,11 +31,20 @@ body {
   background-color: var(--dark-transparent);
   justify-content: center;
   flex-grow:0;
-  flex-basis: 10ex;
+  flex-basis: 20ex;
   text-align: center;
   align-items: center;
+  margin-top: -50vh;
 }
 
-.right.outer.container {
+.right {
   background-color: var(--background-color-right);
+  flex-grow: 6;
+  flex-basis:60vw;
+}
+
+.left {
+  flex-grow: 4;
+  flex-basis: 40vw;
+  flex-shrink:0;
 }
