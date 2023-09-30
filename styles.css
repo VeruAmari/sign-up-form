@@ -8,15 +8,16 @@
 
 /* Variables declarations */
 :root {
+  --new-background: url(https://pbs.twimg.com/media/FiQM1V2XEAIt3va?format=jpg&name=4096x4096);
   --general-fonts: Arial, Helvetica, sans-serif;
   --special-font: reey-regular, Arial, Helvetica, sans-serif;
   --spacing-width: calc(3.4vw);
   --base-color-1: white;
-  --base-color-2: #eeeced;
-  --background-color-left: rgb(152, 192, 93);
-  --background-color-left-highlight: rgb(193, 226, 45);
+  --base-color-2: #e1f0f3;
+  --background-color-left: rgb(93, 169, 192);
+  --background-color-left-highlight: rgb(93, 222, 245);
   --background-color-right: white;
-  --dark-transparent: rgba(50,50,50,60%);
+  --dark-transparent: rgba(0, 0, 0, 0.534);
 }
 
 :root {
@@ -82,6 +83,9 @@ body {
 }
 
 .left {
+  background-image: var(--new-background);
+  background-size:cover;
+  background-position: center;
   flex-basis: 37vw;
   flex-shrink:0;
   justify-content: space-between;
@@ -92,7 +96,8 @@ body {
   margin-bottom: 1vh;
   font-size: .9em;
   color: var(--base-color-1);
-  line-height: 2ex;
+  line-height: 3ex;
+  background-color: var(--dark-transparent);
 }
 
 .hero.text {
@@ -172,6 +177,14 @@ a {
 }
 
 .inner.container a:hover {
+  color: var(--background-color-left-highlight);
+}
+
+.credit a {
+  color: var(--background-color-left);
+  font-weight: bold;
+}
+.credit a:hover {
   color: var(--background-color-left-highlight);
 }
 
