@@ -8,7 +8,8 @@ For custom font import
 
 /* Variables declarations */
 :root {
-  --padding-width: calc(2vw + 15px);
+  --general-fonts: Arial, Helvetica, sans-serif;
+  --spacing-width: calc(3.4vw);
   --base-color-1: white;
   --background-color-left: rgb(152, 192, 93);
   --background-color-right: white;
@@ -22,8 +23,7 @@ For custom font import
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--general-fonts);
 }
 
 body {
@@ -52,9 +52,9 @@ body {
   background-color: var(--dark-transparent);
   justify-content: center;
   flex-grow:0;
-  flex-basis: 14ex;
+  flex-basis: 16ex;
   align-items: center;
-  margin-top: 15vh;
+  margin-top: 22vh;
 }
 
 .right {
@@ -62,9 +62,12 @@ body {
   flex-basis:63vw;
 }
 
-form,
-.inner.container{
-  padding-left: var(--padding-width);
+.inner.container,
+.form.container {
+  padding-left: var(--spacing-width);
+}
+.form.container {
+  padding-bottom: 2ex;
 }
 
 .left {
@@ -81,46 +84,57 @@ form,
 input {
   background-color: var(--base-color-1);
   border: 1px solid #d6d6d6;
-  border-radius: 3px;
-  flex-basis: 250px;
-  max-height: 2em;
+  border-radius: 5px;
+  flex-basis: 3.2ex;
+  max-width: 13.5em;
+  min-width: 15ex;
+  width: 19vw;
+  font-size: 2ex;
+  padding-left: 1ex;
 
 }
 label {
-  margin-top: 7px;
-  display: block;
+  margin-top: 18px;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: .7em;
+  font-weight: bold;
 }
 .field.container {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .duo.container {
-  gap: 2vw;
+  gap: calc(var(--spacing-width) * 1.5);
+  flex-wrap: wrap;
 }
 
-form {
+.form.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  box-shadow: 0px 5px 5px 1px #d6d6d6;
+  box-shadow: 5px 5px 5px 1px #d6d6d6;
 }
 
-
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--background-color-left);
+}
 
 button[type='submit'] {
-  width: 150px;
-  flex-basis:35px;
+  width: 17.5vw;
+  flex-basis:45px;
   color: var(--base-color-1);
+  font-size: 1em;
   font-weight: bold;
   background: var(--background-color-left);
   border-radius: 8px;
   border: 0;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
