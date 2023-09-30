@@ -1,17 +1,20 @@
-/*
-For custom font import
+
+
 @font-face {
-  font-family: ;
-  src: url();
+  font-family: reey-regular;
+  src: url("Reey-Regular.otf");
 }
-*/
+
 
 /* Variables declarations */
 :root {
   --general-fonts: Arial, Helvetica, sans-serif;
+  --special-font: reey-regular, Arial, Helvetica, sans-serif;
   --spacing-width: calc(3.4vw);
   --base-color-1: white;
+  --base-color-2: #eeeced;
   --background-color-left: rgb(152, 192, 93);
+  --background-color-left-highlight: rgb(193, 226, 45);
   --background-color-right: white;
   --dark-transparent: rgba(50,50,50,60%);
 }
@@ -24,6 +27,12 @@ For custom font import
   margin: 0;
   padding: 0;
   font-family: var(--general-fonts);
+}
+
+.logo-text {
+  font-family: var(--special-font);
+  font-size: 2em;
+  color: var(--base-color-1);
 }
 
 body {
@@ -58,7 +67,7 @@ body {
 }
 
 .right {
-  background-color: var(--base-color-1);
+  background-color: var(--base-color-2);
   flex-basis:63vw;
 }
 
@@ -68,6 +77,8 @@ body {
 }
 .form.container {
   padding-bottom: 2ex;
+  background-color: var(--base-color-1);
+  padding-top: 20px;
 }
 
 .left {
@@ -79,9 +90,19 @@ body {
 
 .credit {
   margin-bottom: 1vh;
+  font-size: .9em;
+  color: var(--base-color-1);
+  line-height: 2ex;
+}
+
+.hero.text {
+  margin-bottom: 3ex;
+  font-size: 2.5ex;
+  letter-spacing: .15ex;
 }
 
 input {
+  appearance: none;
   background-color: var(--base-color-1);
   border: 1px solid #d6d6d6;
   border-radius: 5px;
@@ -91,10 +112,31 @@ input {
   width: 19vw;
   font-size: 2ex;
   padding-left: 1ex;
+}
+input::placeholder{
+  color: #a8a8a8;
+  font-size: .8em;
+}
+input:active, input:focus {
+  outline: none;
+}
+input:focus:invalid, input:not(:placeholder-shown):invalid {
+  border: 1px solid rgb(255, 65, 97);
+  box-shadow: 0 0 3px 0px rgb(139, 7, 29);
+}
 
+input:valid{
+  border: 1px solid rgb(152, 192, 93);
+  box-shadow: 0 0 3px 0px rgb(88, 128, 28);
+}
+.clarifier {
+  font-size: 1ex;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 label {
   margin-top: 18px;
+  letter-spacing: .2ex;
   text-transform: uppercase;
   font-size: .7em;
   font-weight: bold;
@@ -122,8 +164,15 @@ label {
 
 a {
   text-decoration: none;
+}
+
+.inner.container a {
   font-weight: bold;
   color: var(--background-color-left);
+}
+
+.inner.container a:hover {
+  color: var(--background-color-left-highlight);
 }
 
 button[type='submit'] {
@@ -137,4 +186,7 @@ button[type='submit'] {
   border: 0;
   margin-top: 35px;
   margin-bottom: 35px;
+}
+button:hover {
+  background-color: var(--background-color-left-highlight);
 }
