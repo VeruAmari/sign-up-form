@@ -1,16 +1,31 @@
-* {
-  margin: 0;
-  padding: 0;
+/*
+For custom font import
+@font-face {
+  font-family: ;
+  src: url();
+}
+*/
+
+/* Variables declarations */
+:root {
+  --padding-width: calc(2vw + 15px);
+  --base-color-1: white;
+  --background-color-left: rgb(152, 192, 93);
+  --background-color-right: white;
+  --dark-transparent: rgba(50,50,50,60%);
 }
 
 :root {
   background: var(--background-color-left);
-  
-  
-  --background-color-left: rgb(192, 240, 120);
-  --background-color-right: white;
-  --dark-transparent: rgba(50,50,50,60%);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   min-height: 100vh;
   min-width: 100vw;
@@ -27,24 +42,85 @@ body {
   justify-content: center;
 }
 
+.inner {
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 0;
+}
+
 .logo.container {
   background-color: var(--dark-transparent);
   justify-content: center;
   flex-grow:0;
-  flex-basis: 20ex;
-  text-align: center;
+  flex-basis: 14ex;
   align-items: center;
-  margin-top: -50vh;
+  margin-top: 15vh;
 }
 
 .right {
-  background-color: var(--background-color-right);
-  flex-grow: 6;
+  background-color: var(--base-color-1);
   flex-basis:63vw;
 }
 
+form,
+.inner.container{
+  padding-left: var(--padding-width);
+}
+
 .left {
-  flex-grow: 4;
   flex-basis: 37vw;
   flex-shrink:0;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.credit {
+  margin-bottom: 1vh;
+}
+
+input {
+  background-color: var(--base-color-1);
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  flex-basis: 250px;
+  max-height: 2em;
+
+}
+label {
+  margin-top: 7px;
+  display: block;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+.field.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.duo.container {
+  gap: 2vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0px 5px 5px 1px #d6d6d6;
+}
+
+
+
+button[type='submit'] {
+  width: 150px;
+  flex-basis:35px;
+  color: var(--base-color-1);
+  font-weight: bold;
+  background: var(--background-color-left);
+  border-radius: 8px;
+  border: 0;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }

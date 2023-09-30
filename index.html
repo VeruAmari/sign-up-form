@@ -10,37 +10,61 @@
 <body>
   <div class="left outer container">
     <div class="logo container">
-      <div class="hero logo">Logo</div>
-      <p class="credit">Background Credit</p>
+      <div class="hero logo">Image-Logo<span>Logo-Text</span></div>
     </div>
+    <p class="credit">Background Credit</p>
   </div>
 
   <div class="right outer container">
-    <p class="hero text one">Slogan!</p>
-    <p class="hero text two">Catchphrase!</p>
-    <p class="hero text three">Tagline!</p>
+
+    <div class="inner container">
+      <p class="hero text one">Slogan!</p>
+      <p class="hero text two">Catchphrase!</p>
+      <p class="hero text three">Tagline!</p>
+    </div>
+
     <form action="#" method="post">
-      <div class="field container">
-        <label for="user_f_name">First Name</label>
-        <input type="text" name="user_f_name" id="user_f_name">
-        <label for="user_l_name">Last Name</label>
-        <input type="text" name="user_l_name" id="user_l_name">
+    <h1>Let's start</h1>
+      <div class="duo container">
+        <div class="field container">
+          <label for="user_f_name">First Name</label>
+          <input type="text" name="user_f_name" id="user_f_name">
+        </div>
+        <div class="field container">
+          <label for="user_l_name">Last Name</label>
+          <input type="text" name="user_l_name" id="user_l_name">
+        </div>
       </div>
-      <div class="field container">
-        <label for="user_email">Email</label>
-        <input type="email" name="user_email" id="user_email">
-        <label for="user_phone">Phone Number</label>
-        <input type="tel" name="user_phone" id="user_phone">
+
+      <div class="duo container">
+        <div class="field container">
+          <label for="user_email">Email</label>
+          <input type="email" name="user_email" id="user_email">
+        </div>
+        <div class="field container">
+          <label for="user_phone">Phone Number</label>
+          <input type="tel" name="user_phone" id="user_phone">
+        </div>
       </div>
-      <div class="field container">
-        <label for="user_password">Password</label>
-        <input type="password" name="user_password" id="user_password">
-        <label for="repeat_password">Repeat Password</label>
-        <input type="password" name="repeat_password" id="repeat_password">
+
+      <div class="duo container">
+        <div class="field container">
+          <label for="user_password">Password</label>
+          <input type="password" name="user_password" id="user_password">
+        </div>
+          <div class="field container">
+          <label for="repeat_password">Repeat Password</label>
+          <input type="password" name="repeat_password" id="repeat_password">
+        </div>
       </div>
+
     </form>
-    <button type="submit">Create Account</button>
-    <p>Already have an account? <a href="#">Log In</a></p>
+
+    <div class="inner container">
+      <button type="submit">Create Account</button>
+      <p>Already have an account? <a href="#">Log In</a></p>
+    </div>
+
   </div>
 </body>
 </html>
